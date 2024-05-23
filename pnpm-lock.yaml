@@ -38,8 +38,8 @@ devDependencies:
     specifier: ^5.0.7
     version: 5.0.7
   svag-emails:
-    specifier: ^0.1.6
-    version: 0.1.6
+    specifier: ^0.1.7
+    version: 0.1.7
   svag-husky:
     specifier: ^0.1.39
     version: 0.1.39(@types/node@20.12.12)
@@ -6775,10 +6775,11 @@ packages:
       - babel-plugin-macros
     dev: true
 
-  /svag-emails@0.1.6:
-    resolution: {integrity: sha512-9S7ronb9HS3C4KIITAkX53Ki0+xrKv2GwD8+DXarmJedL3P+L3QYNBEY3Ve+Y94K+X7h/0I3Odwkdj0cNMzx6w==}
+  /svag-emails@0.1.7:
+    resolution: {integrity: sha512-P7XoQEN1jyBB19rlM4XftHFAYwJQgeO+csTLEqdB3ey61ibyv9Ug3HQDEJQyjjLv5M4UFj2ErCxSlXoTgKkRgg==}
     dependencies:
       '@faire/mjml-react': 3.3.0(mjml@4.15.3)(react-dom@18.3.1)(react@18.3.1)
+      lodash: 4.17.21
       mjml: 4.15.3
       mjml-core: 4.15.3
       react: 18.3.1

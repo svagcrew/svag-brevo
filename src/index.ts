@@ -2,19 +2,7 @@ import axios, { type AxiosResponse } from 'axios'
 import type { SendEmailThroughProvider } from 'svag-emails'
 import { pick } from 'svag-utils/dist/utils/pick'
 
-export const createBrevoThings = ({
-  apiKey,
-  fromEmailAddress,
-  fromEmailName,
-  fromSmsName,
-  mock,
-}: {
-  fromEmailAddress?: string
-  fromEmailName?: string
-  fromSmsName?: string
-  apiKey?: string
-  mock?: boolean
-}) => {
+export const createMakeRequestToBrevo = ({ apiKey, mock }: { apiKey?: string; mock?: boolean; skip?: boolean }) => {
   const makeRequestToBrevo = async ({
     path,
     data,
@@ -25,17 +13,17 @@ export const createBrevoThings = ({
     originalResponse?: AxiosResponse
     loggableResponse: Pick<AxiosResponse, 'status' | 'statusText' | 'data'>
   }> => {
-    if (!apiKey && !mock) {
-      throw new Error('Brevo api key not provided')
-    }
-    if (!apiKey && mock) {
+    if (mock) {
       return {
         loggableResponse: {
           status: 200,
           statusText: 'OK',
-          data: { message: 'Brevo api key not provided' },
+          data: { message: 'Brevo api mocked' },
         },
       }
+    }
+    if (!apiKey) {
+      throw new Error('Brevo api key not provided')
     }
     const response = await axios({
       method: 'POST',
@@ -52,6 +40,55 @@ export const createBrevoThings = ({
       loggableResponse: pick(response, ['status', 'statusText', 'data']),
     }
   }
+
+  return {
+    makeRequestToBrevo,
+  }
+}
+
+export const createSendSmsThroughBrevo = ({
+  apiKey,
+  fromSmsName,
+  mock,
+}: {
+  fromEmailAddress?: string
+  fromEmailName?: string
+  fromSmsName?: string
+  apiKey?: string
+  mock?: boolean
+}) => {
+  const { makeRequestToBrevo } = createMakeRequestToBrevo({ apiKey, mock })
+
+  const sendSmsThroughBrevo = async ({ to, text }: { to: string; text: string }) => {
+    return await makeRequestToBrevo({
+      path: 'transactionalSMS/sms',
+      data: {
+        type: 'transactional',
+        unicodeEnabled: false,
+        sender: fromSmsName || 'Test',
+        recipient: to,
+        content: text,
+      },
+    })
+  }
+
+  return {
+    sendSmsThroughBrevo,
+  }
+}
+
+export const createSendEmailThroughBrevo = ({
+  apiKey,
+  fromEmailAddress,
+  fromEmailName,
+  mock,
+}: {
+  fromEmailAddress?: string
+  fromEmailName?: string
+  apiKey?: string
+  mock?: boolean
+}) => {
+  const { makeRequestToBrevo } = createMakeRequestToBrevo({ apiKey, mock })
 
   const sendEmailThroughBrevo: SendEmailThroughProvider = async ({
     to,
@@ -73,20 +110,30 @@ export const createBrevoThings = ({
     })
   }
 
-  const sendSmsThroughBrevo = async ({ to, text }: { to: string; text: string }) => {
-    return await makeRequestToBrevo({
-      path: 'transactionalSMS/sms',
-      data: {
-        type: 'transactional',
-        unicodeEnabled: false,
-        sender: fromSmsName || 'Test',
-        recipient: to,
-        content: text,
-      },
-    })
+  return {
+    sendEmailThroughBrevo,
   }
+}
+
+export const createBrevoThings = ({
+  apiKey,
+  fromEmailAddress,
+  fromEmailName,
+  fromSmsName,
+  mock,
+}: {
+  fromEmailAddress?: string
+  fromEmailName?: string
+  fromSmsName?: string
+  apiKey?: string
+  mock?: boolean
+}) => {
+  const { makeRequestToBrevo } = createMakeRequestToBrevo({ apiKey, mock })
+  const { sendEmailThroughBrevo } = createSendEmailThroughBrevo({ apiKey, fromEmailAddress, fromEmailName, mock })
+  const { sendSmsThroughBrevo } = createSendSmsThroughBrevo({ apiKey, fromSmsName, mock })
 
   return {
+    makeRequestToBrevo,
     sendEmailThroughBrevo,
     sendSmsThroughBrevo,
   }

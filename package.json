@@ -42,7 +42,7 @@
     "jest": "30.0.0-alpha.4",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.7",
-    "svag-emails": "^0.1.6",
+    "svag-emails": "^0.1.7",
     "svag-husky": "^0.1.39",
     "svag-jest": "^0.1.36",
     "svag-lint": "^0.1.62",
