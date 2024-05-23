@@ -9,8 +9,8 @@ dependencies:
     specifier: ^1.7.2
     version: 1.7.2
   svag-utils:
-    specifier: ^0.1.4
-    version: 0.1.4
+    specifier: ^0.1.5
+    version: 0.1.5
 
 devDependencies:
   '@types/jest':
@@ -6902,15 +6902,15 @@ packages:
       - babel-plugin-macros
     dev: true
 
-  /svag-types@0.1.4:
-    resolution: {integrity: sha512-iJev3ULmVP7vjULA1co+S7lhVZNxdYgoHPIKoSadcrXGs6InBy6cbi3xh7PdwS5pwQ048e6hBvLe2k1KWC6jUg==}
+  /svag-types@0.1.5:
+    resolution: {integrity: sha512-ZArbXkOtavAeCcpW1spxoTmUPPtxpyOI7jsj49scxuxmknHxiGgNTWtp0Vj3wQb4gNwz2qUn+Da3HI6U+20UTA==}
     dev: false
 
-  /svag-utils@0.1.4:
-    resolution: {integrity: sha512-akmqbOR9jmEcAlgDgp484VFWUl13gOoq+o//Kn0FYCTbZ9mIQThkqMd9oStS1R7Z91Sy0POJo8INdLBiRiH8QA==}
+  /svag-utils@0.1.5:
+    resolution: {integrity: sha512-8UMHSOOxJNMUipzjCtmBsuNVddEYgqcmjS3w29WQugMGaSs0irsaGhiDxWhBnOVd2bv41h5jjuFFjCuWuKC0QQ==}
     dependencies:
       lodash: 4.17.21
-      svag-types: 0.1.4
+      svag-types: 0.1.5
     dev: false
 
   /synckit@0.6.2:
