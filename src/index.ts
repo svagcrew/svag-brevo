@@ -1,6 +1,6 @@
 import axios, { type AxiosResponse } from 'axios'
 import type { SendEmailThroughProvider } from 'svag-emails'
-import { pick } from 'svag-utils/dist/utils/pick'
+import { pick } from 'svag-utils/dist/utils/pick.js'
 
 export const createMakeRequestToBrevo = ({ apiKey, mock }: { apiKey?: string; mock?: boolean; skip?: boolean }) => {
   const makeRequestToBrevo = async ({
