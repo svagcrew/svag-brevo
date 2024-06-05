@@ -42,19 +42,18 @@
     "jest": "30.0.0-alpha.4",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.7",
-    "svag-emails": "^0.1.8",
-    "svag-husky": "^0.1.39",
-    "svag-jest": "^0.1.36",
-    "svag-lint": "^0.1.62",
-    "svag-prettier": "^0.1.53",
-    "svag-ts": "^0.1.58",
+    "svag-emails": "^0.1.9",
+    "svag-husky": "^0.1.47",
+    "svag-jest": "^0.1.38",
+    "svag-lint": "^0.1.70",
+    "svag-prettier": "^0.1.61",
+    "svag-ts": "^0.1.66",
     "ts-jest": "^29.1.2",
-    "tsc-alias": "^1.8.10",
     "typescript": "^5.4.5"
   },
   "type": "module",
   "dependencies": {
     "axios": "^1.7.2",
-    "svag-utils": "^0.1.5"
+    "svag-utils": "^0.1.6"
   }
 }
