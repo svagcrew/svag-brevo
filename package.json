@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "axios": "^1.7.2",
-    "svag-utils": "^0.1.10"
+    "svag-utils": "^0.1.11"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
@@ -46,7 +46,7 @@
     "jest": "30.0.0-alpha.4",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.7",
-    "svag-emails": "^0.1.10",
+    "svag-emails": "^0.1.11",
     "svag-husky": "^0.1.53",
     "svag-jest": "^0.1.39",
     "svag-lint": "^0.1.75",

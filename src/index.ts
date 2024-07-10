@@ -51,8 +51,6 @@ export const createSendSmsThroughBrevo = ({
   fromSmsName,
   mock,
 }: {
-  fromEmailAddress?: string
-  fromEmailName?: string
   fromSmsName?: string
   apiKey?: string
   mock?: boolean
