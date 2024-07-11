@@ -12,8 +12,8 @@ importers:
         specifier: ^1.7.2
         version: 1.7.2
       svag-utils:
-        specifier: ^0.1.12
-        version: 0.1.12
+        specifier: ^0.1.13
+        version: 0.1.13
     devDependencies:
       '@types/jest':
         specifier: ^29.5.12
@@ -2655,6 +2655,9 @@ packages:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
 
+  libphonenumber-js@1.11.4:
+    resolution: {integrity: sha512-F/R50HQuWWYcmU/esP5jrH5LiWYaN7DpN0a/99U8+mnGGtnx8kmRE+649dQh3v+CowXXZc8vpkf5AmYkO0AQ7Q==}
+
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
@@ -3498,8 +3501,8 @@ packages:
   svag-types@0.1.7:
     resolution: {integrity: sha512-dsQdTUcHDEen7poY5FHwwXRISSwwIl3EDSUYYvUu+O6/9B50LVIpJw1gYIgy9Wp/0kGCLMgc/G2oHzBMWEo2wA==}
 
-  svag-utils@0.1.12:
-    resolution: {integrity: sha512-CJYHpMMlvu+xGJuBxLYDPYm7AMeDN3zAc6+Hc2s6JDdjcWLB8I0QLNkITnq0156dDNNmMXxZpgpkmBr8NlQOBA==}
+  svag-utils@0.1.13:
+    resolution: {integrity: sha512-aGwjCTAT6UutFol11CIll+t36V1NRkqPocmcPxzgjzzNkSSfvEWCL/T5cCdSMdVFxFymMrSMmtdrUtN5KGGsGw==}
 
   synckit@0.6.2:
     resolution: {integrity: sha512-Vhf+bUa//YSTYKseDiiEuQmhGCoIF3CVBhunm3r/DQnYiGT4JssmnKQc44BIyOZRK2pKjXXAgbhfmbeoC9CJpA==}
@@ -7218,6 +7221,8 @@ snapshots:
       prelude-ls: 1.2.1
       type-check: 0.4.0
 
+  libphonenumber-js@1.11.4: {}
+
   lines-and-columns@1.2.4: {}
 
   locate-path@5.0.0:
@@ -8321,10 +8326,11 @@ snapshots:
 
   svag-types@0.1.7: {}
 
-  svag-utils@0.1.12:
+  svag-utils@0.1.13:
     dependencies:
       generate-password: 1.7.1
       json-stable-stringify: 1.1.1
+      libphonenumber-js: 1.11.4
       lodash: 4.17.21
       svag-types: 0.1.7
       uuid-by-string: 4.0.0
