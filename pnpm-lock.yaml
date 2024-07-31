@@ -12,8 +12,8 @@ importers:
         specifier: ^1.7.2
         version: 1.7.2
       svag-utils:
-        specifier: ^0.1.13
-        version: 0.1.13
+        specifier: ^0.1.14
+        version: 0.1.14
     devDependencies:
       '@types/jest':
         specifier: ^29.5.12
@@ -3501,8 +3501,8 @@ packages:
   svag-types@0.1.7:
     resolution: {integrity: sha512-dsQdTUcHDEen7poY5FHwwXRISSwwIl3EDSUYYvUu+O6/9B50LVIpJw1gYIgy9Wp/0kGCLMgc/G2oHzBMWEo2wA==}
 
-  svag-utils@0.1.13:
-    resolution: {integrity: sha512-aGwjCTAT6UutFol11CIll+t36V1NRkqPocmcPxzgjzzNkSSfvEWCL/T5cCdSMdVFxFymMrSMmtdrUtN5KGGsGw==}
+  svag-utils@0.1.14:
+    resolution: {integrity: sha512-TF44Y5qEl4CCYIs/01FFV8UPcjHuLMFZFbvqALLOVFhgapR8r1qcTyu6ISg5+X5lQ8/K6jn93a07f/DXPhythQ==}
 
   synckit@0.6.2:
     resolution: {integrity: sha512-Vhf+bUa//YSTYKseDiiEuQmhGCoIF3CVBhunm3r/DQnYiGT4JssmnKQc44BIyOZRK2pKjXXAgbhfmbeoC9CJpA==}
@@ -8326,7 +8326,7 @@ snapshots:
 
   svag-types@0.1.7: {}
 
-  svag-utils@0.1.13:
+  svag-utils@0.1.14:
     dependencies:
       generate-password: 1.7.1
       json-stable-stringify: 1.1.1
